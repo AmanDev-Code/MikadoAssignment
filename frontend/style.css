@@ -1,0 +1,320 @@
+/* Reset and general styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #FF4B2B;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif; /* Example of a stylish font */
+}
+
+/* Filters sidebar */
+.filters {
+    flex: 3;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.filters h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.slider-container {
+    margin-bottom: 20px;
+}
+
+.slider-label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.slider-input {
+    width: calc(100% - 60px);
+    appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    height: 5px;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FF4B2B;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-35%);
+}
+
+.slider-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #FF4B2B;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-35%);
+}
+
+.slider-input::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #FF4B2B, #FF4B2B) 0% 0% / var(--fill-percent, 0%) 100% no-repeat, #ddd;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.slider-input::-moz-range-progress {
+    background: #FF4B2B;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 2000px;
+    background-color: aqua;
+}
+
+.slider-input::-moz-range-track {
+    background: #ddd;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 2000px;
+    background-color: aqua;
+}
+
+output {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #555;
+}
+
+.filters form label {
+    display: block;
+    margin-top: 10px;
+    color: #666;
+}
+
+.filters form input,
+.filters form select,
+.filters form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #FF4B2B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF416C;
+}
+
+/* Products grid */
+.products-container {
+    flex: 9;
+    padding: 20px;
+    overflow: hidden; /* Ensures children do not overflow */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.add-to-cart {
+    display: inline-block;
+    background-color: #FF4B2B;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #FF416C;
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #FF4B2B;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #FF416C;
+}
+
+.pagination a.active {
+    background-color: #FF416C;
+}
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 9999;
+    animation: slideInFromBottom 0.5s forwards, fadeOut 0.5s 2.5s forwards;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateX(-50%) translateY(100%);
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+footer {
+    background-color: #FF4B2B;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer h1 {
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif; /* Example of a stylish font */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filters {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+
+    .products-container {
+        padding: 20px;
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>MIkado Solutions</h1>
+    </header>
+    <div class="container">
+        <aside class="filters">
+            <h1>Filters</h1>
+            <form id="filter-form">
+                <div class="slider-container">
+                    <label class="slider-label" for="price_min">Price Min:</label>
+                    <input type="range" id="price_min" name="price_min" min="0" max="6000" value="0" class="slider-input" oninput="updateSlider('price_min', 'price_min_display')">
+                    <output id="price_min_display">0</output>
+                </div>
+                <div class="slider-container">
+                    <label class="slider-label" for="price_max">Price Max:</label>
+                    <input type="range" id="price_max" name="price_max" min="0" max="6000" value="6000" class="slider-input" oninput="updateSlider('price_max', 'price_max_display')">
+                    <output id="price_max_display">6000</output>
+                </div>
+                
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                    <option value="Games">Games</option>
+                    <option value="Apparels">Apparels</option>
+                    <option value="Category 3">Under Development</option>
+                </select>
+                
+                <label for="sale_status">Sale Status:</label>
+                <select id="sale_status" name="sale_status">
+                    <option value="">All</option>
+                    <option value="on sale">On Sale</option>
+                    <option value="not on sale">Not on Sale</option>
+                </select>
+                
+                <button type="submit">Apply Filters</button>
+            </form>
+        </aside>
+        
+        <main class="products-container" id="products-container">
+            <!-- Products will be loaded here via JavaScript -->
+        </main>
+    </div>
+
+    <div class="pagination" id="pagination">
+        <!-- Pagination will be loaded here via JavaScript -->
+    </div>
+    <footer>
+        <h1>Assignment Completed By Aman Ahuja Contact me at sde.amanahuja@gmail.com</h1>
+    </footer>
+</body>
+</html>
