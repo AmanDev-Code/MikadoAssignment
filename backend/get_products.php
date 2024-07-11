@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$limit = 12; // Number of entries to show in a page.
+$limit = 12; // as said in assignemnt 12 card will be in 1 page so set for that.
 // Look for a GET variable page if not found default is 1.
 $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 $start_from = ($page-1) * $limit;

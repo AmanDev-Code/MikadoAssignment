@@ -1,12 +1,9 @@
--- Create the database
 CREATE DATABASE IF NOT EXISTS test;
 USE test;
 
--- Create the database
 CREATE DATABASE IF NOT EXISTS test;
 USE test;
 
--- Create the products table
 CREATE TABLE IF NOT EXISTS products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(255),
@@ -18,7 +15,6 @@ CREATE TABLE IF NOT EXISTS products (
     image_link VARCHAR(255)
 );
 
--- Insert products with shuffled names and image links for games
 INSERT INTO products (product_name, price, category, sale_status, stock_status, description, image_link) VALUES 
 ('GTA 5', '1299', 'Games', 'on sale', 'in stock', 'Experience the thrill of living a life of crime in GTA 5.', 'https://m.media-amazon.com/images/I/81kAitW5qAL._AC_UF1000,1000_QL80_.jpg'),
 ('Cricket 24', '2999', 'Games', 'not on sale', 'out of stock', 'Play as your favorite teams in Cricket 24.', 'https://m.media-amazon.com/images/I/815pn9-S+uL._SL1500_.jpg'),
@@ -77,7 +73,6 @@ INSERT INTO products (product_name, price, category, sale_status, stock_status, 
 ('Casual Shirt for Men (Bubble)', 1399, 'Apparels', 'not on sale', 'out of stock', 'Casual shirt with bubble design for men.', 'https://m.media-amazon.com/images/I/71l6J5SwZVL._SY741_.jpg'),
 ('Lymio Track Pant for Men', 1599, 'Apparels', 'on sale', 'in stock', 'Comfortable track pants with Lymio brand for men.', 'https://m.media-amazon.com/images/I/610IIi6wHuL._SY741_.jpg');
 
--- Create the users table
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,

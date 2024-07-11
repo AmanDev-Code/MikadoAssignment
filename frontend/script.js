@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }</p>
                 `;
 
-                // Add event listener to Add to Cart button
+                // Listener to add to card button also to hit the event of Toast
                 const addToCartBtn = productCard.querySelector('.add-to-cart');
                 if (addToCartBtn) {
                     addToCartBtn.addEventListener('click', function () {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             productsContainer.appendChild(productsGrid);
 
-            // Append pagination after products
+            // add at the end the pagination as said in assignemnt
             productsContainer.appendChild(paginationContainer);
         } else {
             productsContainer.innerHTML = 'No products found.';
@@ -98,13 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Function to add item to cart and display toast notification
+    // function to add product to cart and show notification
     function addToCart(productName) {
-        // Replace with your actual cart logic or API call
         showToast(`${productName} added to cart.`);
     }
 
-    // Function to display toast notification
+    // display notification reference foryou 
     function showToast(message) {
         const toast = document.createElement('div');
         toast.className = 'toast';
@@ -113,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(() => {
             toast.remove();
-        }, 3000); // Remove toast after 3 seconds
+        }, 3000); // Toast remove after 3 second you can change to 5000 if you want to stay htere for more seconds
     }
 
-    // Set initial slider values and update immediately
+    // Initial slider value setter
     updateSlider('price_min', 'price_min_display');
     updateSlider('price_max', 'price_max_display');
 
-    // Listen for input events on sliders
+    // Listen for input slider values
     document.getElementById('price_min').addEventListener('input', function () {
         updateSlider('price_min', 'price_min_display');
     });
@@ -129,6 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlider('price_max', 'price_max_display');
     });
 
-    // Initial fetch
+    // Initial fetch product
     fetchProducts();
 });

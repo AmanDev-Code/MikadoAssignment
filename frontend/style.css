@@ -1,4 +1,4 @@
-/* Reset and general styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -157,11 +157,11 @@ button:hover {
     background-color: #FF416C;
 }
 
-/* Products grid */
+/* Products grid corder as said in pdf of assignemnt */
 .products-container {
     flex: 9;
     padding: 20px;
-    overflow: hidden; /* Ensures children do not overflow */
+    overflow: hidden;
 }
 
 .products-grid {
@@ -227,7 +227,7 @@ button:hover {
     pointer-events: none;
 }
 
-/* Pagination */
+/* Code for pagination */
 .pagination {
     margin-top: 20px;
     text-align: center;
@@ -296,9 +296,9 @@ footer h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Roboto', sans-serif; /* Example of a stylish font */
+    font-family: 'Roboto', sans-serif; 
 }
-/* Responsive adjustments */
+/* Media queries  */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
